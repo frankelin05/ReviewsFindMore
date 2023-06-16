@@ -1,0 +1,145 @@
+Screen1 As screen:
+    Fill: =RGBA(29, 29, 29, 1)
+    LoadingSpinnerColor: =RGBA(3, 121, 137, 1)
+
+    Image2 As image:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =1050
+        Image: ='rm222-mind-14'
+        ImagePosition: =ImagePosition.Fill
+        Width: =640
+        Y: =86
+        ZIndex: =1
+
+    NavBar As rectangle:
+        BorderColor: =RGBA(218, 241, 241, 1)
+        Fill: =RGBA(3, 109, 123, 1)
+        Height: =86
+        Width: =640
+        ZIndex: =2
+
+    Logout As icon.Leave:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        Color: =RGBA(241, 244, 249, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =55
+        Icon: =Icon.Leave
+        Width: =47
+        X: =578
+        Y: =15
+        ZIndex: =3
+
+    Menu As icon.Hamburger:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        Color: =RGBA(241, 244, 249, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.Hamburger
+        X: =16
+        Y: =11
+        ZIndex: =4
+
+    Label5 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(69, 186, 184, 1)
+        Color: =RGBA(205, 228, 231, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.Verdana
+        Height: =73
+        Size: =50
+        Text: ="Feedback"
+        Width: =327
+        X: =155
+        Y: =276
+        ZIndex: =5
+
+    Button5 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(3, 121, 137, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =Dropdown1.Height + 10
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(3, 121, 137, 1), -20%)
+        Size: =24
+        Text: ="Botão"
+        Width: =Dropdown1.Width + 25
+        X: =Dropdown1.X -12
+        Y: =Dropdown1.Y - 4
+        ZIndex: =6
+
+    Dropdown1 As dropdown:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        ChevronBackground: =RGBA(29, 29, 29, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(3, 121, 137, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(3, 121, 137, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Lighter
+        Height: =70
+        HoverColor: =RGBA(237, 237, 237, 1)
+        HoverFill: =RGBA(16, 65, 71, 1)
+        Items: |-
+            =Table(
+                {
+                    SampleStringField: "Sugestão"
+                },
+                {
+                    SampleStringField: "Reclamação"
+                },
+                {
+                    SampleStringField: "Questão"
+                },
+                {
+                    SampleStringField: "Pedido"
+                },
+                {
+                    SampleStringField: "Avaliação de Envento"
+                }
+            )
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(69, 186, 184, 1)
+        SelectionFill: =RGBA(0, 0, 0, 0)
+        Size: =21
+        Width: =575
+        X: =32
+        Y: =371
+        ZIndex: =7
+
+    Button4 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(3, 121, 137, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(3, 121, 137, 1), -20%)
+        Size: =24
+        Text: ="Botão"
+        Width: =280
+        X: =177
+        Y: =473
+        ZIndex: =8
+
+    Image1 As image:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =92
+        Image: ='FindmoreConsutling_white-01-1536x261'
+        Width: =526
+        X: =52
+        Y: =201
+        ZIndex: =9
+

@@ -1,0 +1,104 @@
+{
+  "ComponentIndexes": {},
+  "ControlUniqueGuids": {},
+  "ControlUniqueIds": {
+    "App": 1,
+    "Button4": 13,
+    "Button5": 11,
+    "Dropdown1": 12,
+    "Host": 3,
+    "Image1": 9,
+    "Image2": 8,
+    "Label5": 10,
+    "Logout": 7,
+    "Menu": 6,
+    "NavBar": 5,
+    "Screen1": 4
+  },
+  "FunctionParamsInvariantScripts": {},
+  "FunctionParamsInvariantScriptsOnInstances": {},
+  "HeaderLastSavedDateTimeUTC": "06/16/2023 11:29:23",
+  "IsLegacyComponentAllowGlobalScopeCase": false,
+  "LocalConnectionIDReferences": {},
+  "LocalDatabaseReferencesAsEmpty": false,
+  "LocalResourceFileNames": {
+    "FindmoreConsutling_white-01-1536x261": "2ab0f796-da9f-4211-8d9c-64c74effa319.png",
+    "lg8mw8uk6xz81": "5c4e93a2-c690-4af2-84e0-a023389d6694.jpg",
+    "rm222-mind-14": "1aba4ac8-5594-4bca-aa5a-f6389c3408e8.jpg"
+  },
+  "LocalResourceRootPaths": {
+    "FindmoreConsutling_white-01-1536x261": "https://docserverpwaprodneu.blob.core.windows.net/1b3a1fd0-06a9-4b66-9f11-978ecb46f207-1/resource/Assets0Images02ab0f796-da9f-4211-8d9c-64c74effa319.png?sv=2018-03-28&sr=b&sig=UwM8aEQEH3Tzf0H7ODEjEFV4n15XcSAAdh0F0Z0Jbcs%3D&spr=https&se=2023-06-17T11%3A19%3A42Z&sp=r",
+    "lg8mw8uk6xz81": "https://docserverpwaprodneu.blob.core.windows.net/1b3a1fd0-06a9-4b66-9f11-978ecb46f207-1/resource/Assets0Images05c4e93a2-c690-4af2-84e0-a023389d6694.jpg?sv=2018-03-28&sr=b&sig=tbDa0KudJK7sZFnyprLOwzthTetQDhyFqbX8wB5l9bY%3D&spr=https&se=2023-06-17T11%3A19%3A42Z&sp=r",
+    "rm222-mind-14": "https://docserverpwaprodneu.blob.core.windows.net/1b3a1fd0-06a9-4b66-9f11-978ecb46f207-1/resource/Assets0Images01aba4ac8-5594-4bca-aa5a-f6389c3408e8.jpg?sv=2018-03-28&sr=b&sig=wYPD%2Fhq8W9ZS8Uu0sWqLcUG5n9NPMzcsasebS7um9QI%3D&spr=https&se=2023-06-17T11%3A19%3A42Z&sp=r"
+  },
+  "OrderComponentMetadata": {},
+  "OrderComponentTemplate": {},
+  "OrderDataSource": {
+    "CustomGallerySample": 0,
+    "DropDownSample": 2,
+    "ListboxSample": 1
+  },
+  "OrderGroupControls": {},
+  "OrderPcfTemplate": {},
+  "OrderTemplate": {},
+  "OrderXMLTemplate": {
+    "button": 4,
+    "dropdown": 5,
+    "icon": 1,
+    "image": 2,
+    "label": 3,
+    "rectangle": 0
+  },
+  "OverridablePropertiesEntry": {
+    "App": {},
+    "Button4": {},
+    "Button5": {},
+    "Dropdown1": {},
+    "Host": {},
+    "Image1": {},
+    "Image2": {},
+    "Label5": {},
+    "Logout": {},
+    "Menu": {},
+    "NavBar": {},
+    "Screen1": {}
+  },
+  "PCFDynamicSchemaForIRRetrievalEntry": {},
+  "PCFTemplateEntry": {},
+  "PublishOrderIndices": {
+    "App": 0,
+    "Button4": 8,
+    "Button5": 6,
+    "Dropdown1": 7,
+    "Host": 0,
+    "Image1": 4,
+    "Image2": 3,
+    "Label5": 5,
+    "Logout": 2,
+    "Menu": 1,
+    "NavBar": 0,
+    "Screen1": 0
+  },
+  "ResourcesJsonIndices": {
+    "Image-FindmoreConsutling_white-01-1536x261": 1,
+    "Image-lg8mw8uk6xz81": 2,
+    "Image-rm222-mind-14": 3,
+    "Image-SampleImage": 0
+  },
+  "RuleScreenIdWithoutScreen": {},
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.107072,
+    "ControlCount": {
+      "button": 2,
+      "dropdown": 1,
+      "icon": 2,
+      "image": 2,
+      "label": 1,
+      "rectangle": 1,
+      "screen": 1
+    },
+    "DeserializationLoadTime": 0.5564532
+  },
+  "WasLocalDatabaseReferencesEmpty": true
+}
