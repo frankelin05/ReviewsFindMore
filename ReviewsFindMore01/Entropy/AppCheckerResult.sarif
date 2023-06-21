@@ -138,6 +138,18 @@
               "message": {
                 "text": "Erro ao executar a regra app-InefficientDelayLoading."
               }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 3
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Erro ao executar a regra app-InefficientDelayLoading."
+              }
             }
           ]
         }
@@ -201,36 +213,6 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.FindmoreConsutling_white-01-1536x261"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.FindmoreConsutling_white-01-1536x261",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FindmoreConsutling_white-01-1536x261",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 2
         },
         {
           "locations": [
