@@ -129,7 +129,7 @@ Screen1 As screen:
         Text: ="Botão"
         Width: =280
         X: =175
-        Y: =1019
+        Y: =504
         ZIndex: =8
 
     Image1 As image:
