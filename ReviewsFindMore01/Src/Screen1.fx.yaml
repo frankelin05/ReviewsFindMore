@@ -60,7 +60,8 @@ Screen1 As screen:
 
     Dropdown1 As dropdown:
         BorderColor: =RGBA(69, 186, 184, 1)
-        ChevronBackground: =RGBA(29, 29, 29, 1)
+        BorderThickness: =0
+        ChevronBackground: =RGBA(3, 121, 137, 1)
         ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
         ChevronDisabledFill: =RGBA(244, 244, 244, 1)
         ChevronHoverBackground: =ColorFade(RGBA(3, 121, 137, 1), -20%)
@@ -68,13 +69,13 @@ Screen1 As screen:
         Color: =RGBA(255, 255, 255, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisabledFill: =RGBA(3, 121, 137, 1)
         Fill: =RGBA(3, 121, 137, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Lighter
         Height: =70
         HoverColor: =RGBA(237, 237, 237, 1)
-        HoverFill: =RGBA(16, 65, 71, 1)
+        HoverFill: =RGBA(3, 121, 137, 1)
         Items: |-
             =Table(
                 {
@@ -93,9 +94,10 @@ Screen1 As screen:
                     SampleStringField: "Avaliação de Envento"
                 }
             )
+        PressedBorderColor: =ColorFade(RGBA(3, 121, 137, 1), -20%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(69, 186, 184, 1)
-        SelectionFill: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(3, 121, 137, 1)
+        SelectionFill: =RGBA(3, 121, 137, 1)
         Size: =21
         Width: =575
         X: =32

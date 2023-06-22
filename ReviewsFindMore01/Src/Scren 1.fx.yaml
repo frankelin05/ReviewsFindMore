@@ -72,50 +72,6 @@
         Y: =Dropdown1_1.Y - 4
         ZIndex: =6
 
-    Dropdown1_1 As dropdown:
-        BorderColor: =RGBA(69, 186, 184, 1)
-        ChevronBackground: =RGBA(29, 29, 29, 1)
-        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-        ChevronHoverBackground: =ColorFade(RGBA(3, 121, 137, 1), -20%)
-        ChevronHoverFill: =RGBA(255, 255, 255, 1)
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(3, 121, 137, 1)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Lighter
-        Height: =70
-        HoverColor: =RGBA(237, 237, 237, 1)
-        HoverFill: =RGBA(16, 65, 71, 1)
-        Items: |-
-            =Table(
-                {
-                    SampleStringField: "Sugestão"
-                },
-                {
-                    SampleStringField: "Reclamação"
-                },
-                {
-                    SampleStringField: "Questão"
-                },
-                {
-                    SampleStringField: "Pedido"
-                },
-                {
-                    SampleStringField: "Avaliação de Envento"
-                }
-            )
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(69, 186, 184, 1)
-        SelectionFill: =RGBA(0, 0, 0, 0)
-        Size: =21
-        Width: =575
-        X: =32
-        Y: =371
-        ZIndex: =7
-
     Button4_1 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -147,4 +103,68 @@
         X: =16
         Y: =1024
         ZIndex: =9
+
+    Label1 As label:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        Color: =RGBA(29, 29, 29, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =70
+        Size: =21
+        Text: ="Qualquer Coisa"
+        Width: =560
+        X: =40
+        Y: =301
+        ZIndex: =10
+
+    TextInput1 As text:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        Default: ="Assunto"
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(3, 121, 137, 1)
+        FocusedBorderThickness: =4
+        Height: =70
+        HoverBorderColor: =RGBA(69, 186, 184, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(16, 65, 71, 1)
+        Size: =21
+        Width: =560
+        X: =40
+        Y: =371
+        ZIndex: =11
+
+    Rating1 As rating:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =0
+        Default: =3
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =Self.Fill
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        FocusedBorderColor: =Self.BorderColor
+        FocusedBorderThickness: =2
+        Height: =55
+        HoverFill: =Self.Fill
+        PressedFill: =Self.Fill
+        RatingFill: =RGBA(69, 186, 184, 1)
+        Width: =326
+        X: =40
+        Y: =547
+        ZIndex: =12
+
+    Label1_1 As label:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        Color: =RGBA(29, 29, 29, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =70
+        Size: =21
+        Text: ="Qualquer Coisa"
+        Width: =560
+        X: =48
+        Y: =477
+        ZIndex: =13
 
