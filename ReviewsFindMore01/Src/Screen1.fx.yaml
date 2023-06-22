@@ -114,7 +114,7 @@ Screen1 As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(3, 121, 137, 1), -20%)
         Size: =24
-        Text: ="Botão"
+        Text: ="Começar"
         Width: =280
         X: =175
         Y: =504
