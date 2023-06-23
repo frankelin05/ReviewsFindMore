@@ -113,8 +113,9 @@ Screen1 As screen:
         Height: =70
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(3, 121, 137, 1), -20%)
+        OnSelect: =Navigate(Base,ScreenTransition.Fade)
         Size: =24
-        Text: ="Sussy"
+        Text: ="Confirmar"
         Width: =280
         X: =175
         Y: =504
@@ -130,4 +131,11 @@ Screen1 As screen:
         X: =52
         Y: =191
         ZIndex: =9
+
+    MenuLeftNav_1 As MenuLeftNav:
+        Height: =1136
+        MenuWidth: =If(showMenu, MenuLeftNav_1.SetMenuWidth,icoHamburger_1.Width)
+        OnReset: =Set(showMenu, MenuLeftNav_1.ExpandMenu)
+        Width: =259
+        ZIndex: =10
 
