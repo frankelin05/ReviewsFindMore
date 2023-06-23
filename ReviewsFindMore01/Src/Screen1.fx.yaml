@@ -6,17 +6,17 @@ Screen1 As screen:
         BorderColor: =RGBA(69, 186, 184, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =1050
+        Height: =1066
         Image: ='rm222-mind-14'
         ImagePosition: =ImagePosition.Fill
         Width: =640
-        Y: =86
+        Y: =70
         ZIndex: =1
 
     NavBar As rectangle:
         BorderColor: =RGBA(218, 241, 241, 1)
         Fill: =RGBA(3, 109, 123, 1)
-        Height: =86
+        Height: =70
         Width: =640
         ZIndex: =2
 
@@ -27,9 +27,10 @@ Screen1 As screen:
         DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =55
         Icon: =Icon.Leave
+        OnSelect: =
         Width: =47
         X: =578
-        Y: =15
+        Y: =10
         ZIndex: =3
 
     Button5 As button:
@@ -103,10 +104,11 @@ Screen1 As screen:
         Height: =70
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(3, 121, 137, 1), -20%)
+        OnSelect: =Navigate('Scren 1',ScreenTransition.Fade)
         Size: =24
         Text: ="Confirmar"
         Width: =280
-        X: =159
+        X: =175
         Y: =501
         ZIndex: =8
 
@@ -123,11 +125,22 @@ Screen1 As screen:
 
     MenuLeftNav_1 As MenuLeftNav:
         HamburgerMenuColor: =RGBA(255, 255, 255, 1)
-        Height: =1120
+        Height: =1066
         MenuColor: =RGBA(3, 121, 137, 1)
-        MenuWidth: =If(showMenu, MenuLeftNav_1.SetMenuWidth,icoHamburger_1.Width)
-        OnReset: =Set(showMenu, MenuLeftNav_1.ExpandMenu)
-        Width: =373
-        Y: =15
+        Width: =262
+        Y: =70
         ZIndex: =10
+
+    Icon1 As icon.Hamburger:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        Color: =RGBA(69, 186, 184, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Fill: =Color.Transparent
+        Height: =54
+        Icon: =Icon.Hamburger
+        Width: =52
+        X: =10
+        Y: =10
+        ZIndex: =11
 
