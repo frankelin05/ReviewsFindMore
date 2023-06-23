@@ -1,0 +1,238 @@
+"'Scren 1' As screen":
+    Fill: =RGBA(29, 29, 29, 1)
+    LoadingSpinnerColor: =RGBA(3, 121, 137, 1)
+
+    Image2_1 As image:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =1050
+        Image: ='rm222-mind-14'
+        ImagePosition: =ImagePosition.Fill
+        Width: =640
+        Y: =86
+        ZIndex: =1
+
+    NavBar_1 As rectangle:
+        BorderColor: =RGBA(218, 241, 241, 1)
+        Fill: =RGBA(3, 109, 123, 1)
+        Height: =86
+        Width: =640
+        ZIndex: =2
+
+    Logout_1 As icon.Leave:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        Color: =RGBA(241, 244, 249, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =55
+        Icon: =Icon.Leave
+        Width: =47
+        X: =578
+        Y: =15
+        ZIndex: =3
+
+    Menu_1 As icon.Hamburger:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        Color: =RGBA(241, 244, 249, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.Hamburger
+        X: =16
+        Y: =11
+        ZIndex: =4
+
+    Label5_1 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(69, 186, 184, 1)
+        Color: =RGBA(29, 29, 29, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =93
+        Size: =56
+        Text: ="Feedback"
+        Width: =417
+        X: =120
+        Y: =110
+        ZIndex: =5
+
+    Button4_1 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(255, 255, 255, 1)
+        DisabledFill: =RGBA(3, 121, 137, 1)
+        Fill: =RGBA(3, 121, 137, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(3, 121, 137, 1), -20%)
+        Size: =24
+        Text: ="Seguinte"
+        Width: =280
+        X: =340
+        Y: =1024
+        ZIndex: =8
+
+    Voltar As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(230, 46, 46, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(230, 46, 46, 1), -20%)
+        Size: =24
+        Text: ="Voltar"
+        Width: =280
+        X: =16
+        Y: =1024
+        ZIndex: =9
+
+    Label1 As label:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        Color: =RGBA(29, 29, 29, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =70
+        Size: =21
+        Text: ="Assunto"
+        Width: =560
+        X: =41
+        Y: =300
+        ZIndex: =10
+
+    TextInput1 As text:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(69, 186, 184, 1)
+        DisabledColor: =RGBA(255, 255, 255, 1)
+        DisabledFill: =RGBA(3, 121, 137, 1)
+        Fill: =RGBA(3, 121, 137, 1)
+        FocusedBorderThickness: =4
+        Height: =70
+        HintText: ="..."
+        HoverBorderColor: =RGBA(69, 186, 184, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(3, 121, 137, 1)
+        Italic: =true
+        Size: =21
+        Width: =560
+        X: =39
+        Y: =370
+        ZIndex: =11
+
+    Label1_1 As label:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        Color: =RGBA(29, 29, 29, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =70
+        Size: =21
+        Text: ="Mensagem"
+        Width: =560
+        X: =41
+        Y: =464
+        ZIndex: =13
+
+    Label5_2 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(69, 186, 184, 1)
+        Color: =RGBA(29, 29, 29, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.Verdana
+        Height: =86
+        Size: =36
+        Text: ="""Escolha dele"""
+        Width: =465
+        X: =88
+        Y: =203
+        ZIndex: =14
+
+    TextInput1_1 As text:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(69, 186, 184, 1)
+        DisabledColor: =RGBA(255, 255, 255, 1)
+        DisabledFill: =RGBA(3, 121, 137, 1)
+        Fill: =RGBA(3, 121, 137, 1)
+        FocusedBorderThickness: =4
+        Height: =238
+        HintText: ="..."
+        HoverBorderColor: =RGBA(69, 186, 184, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(3, 121, 137, 1)
+        Italic: =true
+        Mode: =TextMode.MultiLine
+        Size: =21
+        Width: =560
+        X: =39
+        Y: =534
+        ZIndex: =15
+
+    Dropdown1_1 As dropdown:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        BorderThickness: =0
+        ChevronBackground: =RGBA(3, 121, 137, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(3, 121, 137, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(3, 121, 137, 1)
+        Fill: =RGBA(3, 121, 137, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Lighter
+        Height: =70
+        HoverColor: =RGBA(237, 237, 237, 1)
+        HoverFill: =RGBA(3, 121, 137, 1)
+        Items: |-
+            =Table(
+                {
+                    SampleStringField: "Eventos"
+                },
+                {
+                    SampleStringField: "Escritório"
+                },
+                {
+                    SampleStringField: "Cliente"
+                },
+                {
+                    SampleStringField: "Trabalho diário"
+                },
+                {
+                    SampleStringField: "Viagens"
+                },
+                    {
+                    SampleStringField: "Gestão"
+                },
+                    {
+                    SampleStringField: "Outros"
+                }
+            )
+        PressedBorderColor: =ColorFade(RGBA(3, 121, 137, 1), -20%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(3, 121, 137, 1)
+        SelectionFill: =RGBA(3, 121, 137, 1)
+        Size: =21
+        Width: =558
+        X: =41
+        Y: =865
+        ZIndex: =16
+
+    Label1_2 As label:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        Color: =RGBA(29, 29, 29, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =70
+        Size: =21
+        Text: ="Tópico"
+        Width: =560
+        X: =39
+        Y: =795
+        ZIndex: =17
+
