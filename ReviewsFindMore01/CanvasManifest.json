@@ -111,10 +111,11 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "8675abbf-3a53-453e-9cc5-1b31ab1f1db4",
-    "Id": "8675abbf-3a53-453e-9cc5-1b31ab1f1db4",
+    "Id": "afcfc828-9a5f-4529-bb52-707522d30f83",
     "InstrumentationKey": "",
+    "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
-    "Name": "ReviewsFindMore",
+    "Name": "ReviewsFindMore.msapp",
     "OriginatingVersion": "1.332",
     "ParserErrorCount": 0
   },
