@@ -48,7 +48,7 @@
     "NavBar": 19,
     "NavBar_1": 28,
     "NavBar_2": 43,
-    "Rating1": 57,
+    "Rating1": 50,
     "rectShape_1": 8,
     "rectShapeSubMenu_1": 14,
     "Screen1": 18,
@@ -62,7 +62,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "06/23/2023 14:25:10",
+  "HeaderLastSavedDateTimeUTC": "06/23/2023 14:32:46",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
@@ -73,10 +73,10 @@
     "rm222-mind-14": "0004.jpg"
   },
   "LocalResourceRootPaths": {
-    "FindmoreConsutling_white-01-1536x261": "https://docserverpwaprodweu.blob.core.windows.net/1f4c45bf-7ed4-4651-975f-7be83d3fe7ae-1/resource/Assets0Images00001.png?sv=2018-03-28&sr=b&sig=VikK%2BsavdPScY7RL4LLH0i2YCgq9ctrpGjHo9ZGPrK4%3D&spr=https&se=2023-06-24T10%3A41%3A56Z&sp=r",
-    "imageedit_2_3718430920": "https://docserverpwaprodweu.blob.core.windows.net/1f4c45bf-7ed4-4651-975f-7be83d3fe7ae-1/resource/Assets0Images00002.png?sv=2018-03-28&sr=b&sig=c9GK7oXh7%2FwVZUrn88NUP3etABBzw5aLkLMWs9bNxio%3D&spr=https&se=2023-06-24T10%3A41%3A56Z&sp=r",
-    "lg8mw8uk6xz81": "https://docserverpwaprodweu.blob.core.windows.net/1f4c45bf-7ed4-4651-975f-7be83d3fe7ae-1/resource/Assets0Images00003.jpg?sv=2018-03-28&sr=b&sig=1whfxg8oQJ2BRDgJ1NxVrY%2B2NqAh%2BBoQ9ppR44Wi29I%3D&spr=https&se=2023-06-24T10%3A41%3A56Z&sp=r",
-    "rm222-mind-14": "https://docserverpwaprodweu.blob.core.windows.net/1f4c45bf-7ed4-4651-975f-7be83d3fe7ae-1/resource/Assets0Images00004.jpg?sv=2018-03-28&sr=b&sig=BHY1xgnMeHwf%2BjRBKJDH5F5NU6OXXLhfBeuHULBS6sQ%3D&spr=https&se=2023-06-24T10%3A41%3A56Z&sp=r"
+    "FindmoreConsutling_white-01-1536x261": "https://docserverpwaprodneu.blob.core.windows.net/0354cd08-7acb-462f-aa81-294a6cf09acd-1/resource/Assets0Images00001.png?sv=2018-03-28&sr=b&sig=nMMEOjfWYkEdtvDD8tjOGPT2Fj9qoRaYkWc1JtvPHqY%3D&spr=https&se=2023-06-24T14%3A45%3A47Z&sp=r",
+    "imageedit_2_3718430920": "https://docserverpwaprodneu.blob.core.windows.net/0354cd08-7acb-462f-aa81-294a6cf09acd-1/resource/Assets0Images00002.png?sv=2018-03-28&sr=b&sig=axpXZZ2kY6EOgl9kDAaEYKLpBuzw9Z753S5uRCtEKcM%3D&spr=https&se=2023-06-24T14%3A45%3A47Z&sp=r",
+    "lg8mw8uk6xz81": "https://docserverpwaprodneu.blob.core.windows.net/0354cd08-7acb-462f-aa81-294a6cf09acd-1/resource/Assets0Images00003.jpg?sv=2018-03-28&sr=b&sig=ay%2BvwZ%2Fl%2Bdn%2FJZSpytNlASmQpwqrlKTt%2FsAV2Kv6G8w%3D&spr=https&se=2023-06-24T14%3A45%3A47Z&sp=r",
+    "rm222-mind-14": "https://docserverpwaprodneu.blob.core.windows.net/0354cd08-7acb-462f-aa81-294a6cf09acd-1/resource/Assets0Images00004.jpg?sv=2018-03-28&sr=b&sig=tuBCIbMnToZtX3IOzW1U0VWEyja6R7JkQ77cC1GIC4U%3D&spr=https&se=2023-06-24T14%3A45%3A47Z&sp=r"
   },
   "OrderComponentMetadata": {
     "8272d116cbc044edb2f813b70d8f437b": 0
@@ -229,7 +229,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.0878074,
+    "AnalysisLoadTime": 0.1214675,
     "ControlCount": {
       "8272d116cbc044edb2f813b70d8f437b": 2,
       "button": 8,
@@ -239,11 +239,12 @@
       "icon": 8,
       "image": 4,
       "label": 12,
+      "rating": 1,
       "rectangle": 5,
       "screen": 3,
-      "text": 4
+      "text": 3
     },
-    "DeserializationLoadTime": 0.8452774
+    "DeserializationLoadTime": 1.2691553
   },
   "WasLocalDatabaseReferencesEmpty": true
 }
