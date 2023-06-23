@@ -1,0 +1,208 @@
+MenuLeftNav As CanvasComponent:
+    ExpandMenu: =false
+    Fill: =RGBA(0, 0, 0, 0)
+    HamburgerMenuColor: =Color.Blue
+    Height: =640
+    MenuBkgColor: =RGBA(220,220,220,1)
+    MenuColor: =Color.Blue
+    MenuItems: |-
+        =Table(
+            {
+                MenuLabel: "Home",
+                MenuIcon: Icon.Home,
+                MenuScreenNavigate: App.ActiveScreen,
+                MenuID: 1,
+                SubMenu: Table(
+                    {
+                        MenuLabel: "Currency",
+                        MenuIcon: Icon.Currency,
+                        MenuScreenNavigate: App.ActiveScreen,
+                        MenuID: 1
+                    }
+                )
+            },
+            {
+                MenuLabel: "Currency",
+                MenuIcon: Icon.Currency,
+                MenuScreenNavigate: App.ActiveScreen,
+                MenuID: 2,
+                SubMenu: Table()
+            },
+            {
+                MenuLabel: "Document",
+                MenuIcon: Icon.DocumentPDF,
+                MenuScreenNavigate: App.ActiveScreen,
+                MenuID: 3,
+                SubMenu: Table(
+                    {
+                        MenuLabel: "Currency",
+                        MenuIcon: Icon.Currency,
+                        MenuScreenNavigate: App.ActiveScreen,
+                        MenuID: 1
+                    },
+                    {
+                        MenuLabel: "Currency",
+                        MenuIcon: Icon.Currency,
+                        MenuScreenNavigate: App.ActiveScreen,
+                        MenuID: 2
+                    }
+                )
+            }
+        )
+    MenuWidth: =If(showMenu, MenuLeftNav.SetMenuWidth,icoHamburger_1.Width)
+    OnReset: =Set(showMenu, MenuLeftNav.ExpandMenu)
+    SetMenuWidth: =300
+    Width: =MenuLeftNav.MenuWidth
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    icoHamburger_1 As icon.Hamburger:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =MenuLeftNav.HamburgerMenuColor
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =49
+        Icon: =Icon.Hamburger
+        OnSelect: =Set(showMenu,!showMenu)
+        PaddingBottom: =5
+        PaddingLeft: =5
+        PaddingRight: =5
+        PaddingTop: =5
+        Width: =59
+        ZIndex: =1
+
+    galMenu_1 As gallery.variableTemplateHeightGallery:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Fill: =MenuLeftNav.MenuBkgColor
+        Height: =Parent.Height-icoHamburger_1.Height
+        Items: =Sort(MenuLeftNav.MenuItems,MenuID,SortOrder.Ascending)
+        Layout: =Layout.Vertical
+        TemplateSize: =280
+        Visible: =showMenu
+        Width: =Parent.Width
+        Y: =icoHamburger_1.Height
+        ZIndex: =2
+
+        rectShape_1 As rectangle:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =MenuLeftNav.MenuColor
+            Height: =48
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.MenuScreenNavigate = App.ActiveScreen
+            Width: =6
+            ZIndex: =1
+
+        icoMenu_1 As icon.Add:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =MenuLeftNav.MenuColor
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =48
+            Icon: =ThisItem.MenuIcon
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            Width: =62
+            X: =6
+            ZIndex: =2
+
+        lblMenu_1 As label:
+            AutoHeight: =true
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =MenuLeftNav.MenuColor
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Lighter
+            Height: =41
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.MenuLabel
+            Width: =Parent.TemplateWidth-icoMenu_1.Width-rectShape_1.Width
+            X: =68
+            Y: =7
+            ZIndex: =3
+
+        btnClick_1 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0,0,0,0)
+            FontWeight: =FontWeight.Semibold
+            Height: =lblMenu_1.Height+lblMenu_1.Y
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(0,0,0,0)
+            OnSelect: =Navigate(ThisItem.MenuScreenNavigate,ScreenTransition.Cover )
+            PressedFill: =RGBA(0,0,0,0)
+            Size: =24
+            Text: =""
+            Width: =Parent.TemplateWidth
+            ZIndex: =4
+
+        galSubMenu_1 As gallery.variableTemplateHeightGallery:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =MenuLeftNav.MenuBkgColor
+            Height: =CountRows(ThisItem.SubMenu)*55
+            Items: =Sort(ThisItem.SubMenu,MenuID,SortOrder.Ascending)
+            Layout: =Layout.Vertical
+            TemplateSize: =CountRows(ThisItem.SubMenu)*55
+            Visible: =showMenu
+            Width: =Parent.Width-20
+            X: =10
+            Y: =icoHamburger_1.Height
+            ZIndex: =5
+
+            rectShapeSubMenu_1 As rectangle:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Fill: =MenuLeftNav.MenuColor
+                Height: =48
+                OnSelect: =Select(Parent)
+                Visible: =ThisItem.MenuScreenNavigate = App.ActiveScreen
+                Width: =6
+                ZIndex: =1
+
+            icoSubMenu_1 As icon.Add:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =MenuLeftNav.MenuColor
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =48
+                Icon: =ThisItem.MenuIcon
+                OnSelect: =Select(Parent)
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                Width: =62
+                X: =6
+                ZIndex: =2
+
+            lblSubMenu_1 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =MenuLeftNav.MenuColor
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Lighter
+                Height: =27
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.MenuLabel
+                Width: =Parent.TemplateWidth-icoSubMenu_1.Width-rectShapeSubMenu_1.Width
+                X: =68
+                Y: =7
+                ZIndex: =3
+
+            btnClickSubMenu_1 As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =Color.Transparent
+                FontWeight: =FontWeight.Semibold
+                Height: =lblSubMenu_1.Height+lblSubMenu_1.Y
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(0,0,0,0)
+                OnSelect: =Navigate(ThisItem.MenuScreenNavigate,ScreenTransition.Cover )
+                PressedFill: =RGBA(0,0,0,0)
+                Size: =24
+                Text: =""
+                Width: =Parent.TemplateWidth
+                ZIndex: =4
+
