@@ -113,12 +113,11 @@ Screen1 As screen:
         Height: =70
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(3, 121, 137, 1), -20%)
-        OnSelect: =
         Size: =24
         Text: ="Confirmar"
         Width: =280
         X: =175
-        Y: =504
+        Y: =500
         ZIndex: =8
 
     Image1 As image:
@@ -131,9 +130,4 @@ Screen1 As screen:
         X: =52
         Y: =191
         ZIndex: =9
-
-    MenuLeftNav_1 As MenuLeftNav:
-        Height: =1136
-        Width: =259
-        ZIndex: =10
 
