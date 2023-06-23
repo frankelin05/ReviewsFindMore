@@ -125,8 +125,6 @@ Screen1 As screen:
         HamburgerMenuColor: =RGBA(255, 255, 255, 1)
         Height: =1120
         MenuColor: =RGBA(3, 121, 137, 1)
-        MenuWidth: =If(showMenu, MenuLeftNav_1.SetMenuWidth,icoHamburger_1.Width)
-        OnReset: =Set(showMenu, MenuLeftNav_1.ExpandMenu)
         Width: =373
         Y: =15
         ZIndex: =10
