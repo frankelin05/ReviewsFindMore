@@ -134,8 +134,6 @@ Screen1 As screen:
 
     MenuLeftNav_1 As MenuLeftNav:
         Height: =1136
-        MenuWidth: =If(showMenu, MenuLeftNav_1.SetMenuWidth,icoHamburger_1.Width)
-        OnReset: =Set(showMenu, MenuLeftNav_1.ExpandMenu)
         Width: =259
         ZIndex: =10
 
