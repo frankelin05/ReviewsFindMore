@@ -1,0 +1,129 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cra39_feedbacks",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cra39_feedback",
+    "MaxGetRowsCount": 500,
+    "Name": "Feedbacks",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Proprietário",
+      "cra39_assunto": "Assunto",
+      "cra39_avaliacao": "Avaliacao",
+      "cra39_datasubmetido": "DataSubmetido",
+      "cra39_email": "Email",
+      "cra39_estado": "Estado (cra39_estado)",
+      "cra39_feedback_AsyncOperations": "Tarefas de Sistema",
+      "cra39_feedback_BulkDeleteFailures": "Falhas de Eliminação em Massa",
+      "cra39_feedback_DuplicateBaseRecord": "Registos Duplicados (cra39_feedback_DuplicateBaseRecord)",
+      "cra39_feedback_DuplicateMatchingRecord": "Registos Duplicados (cra39_feedback_DuplicateMatchingRecord)",
+      "cra39_feedback_MailboxTrackingFolders": "Pastas de Monitorização Automática da Caixa de Correio",
+      "cra39_feedback_PrincipalObjectAttributeAccesses": "Partilha de Campos",
+      "cra39_feedback_ProcessSession": "Sessões de Processo",
+      "cra39_feedback_SyncErrors": "Erros de Sincronização",
+      "cra39_feedbackid": "Feedback",
+      "cra39_id": "Id",
+      "cra39_mensegem": "Mensegem",
+      "cra39_outrospontos": "OutrosPontos",
+      "cra39_pontonegativo": "PontoNegativo",
+      "cra39_pontopositivo": "PontoPositivo",
+      "cra39_tipo": "Tipo",
+      "cra39_topicos": "Topicos",
+      "createdby": "Criado Por",
+      "createdon": "Criado Em",
+      "createdonbehalfby": "Criado Por (Delegado)",
+      "importsequencenumber": "Número de Sequência da Importação",
+      "modifiedby": "Modificado Por",
+      "modifiedon": "Modificado Em",
+      "modifiedonbehalfby": "Modificado Por (Delegado)",
+      "overriddencreatedon": "Registo Criado Em",
+      "owningbusinessunit": "Unidade de Negócio Proprietária",
+      "owningteam": "Equipa Proprietária",
+      "owninguser": "Utilizador Proprietário",
+      "statecode": "Estado (statecode)",
+      "statuscode": "Razão do Estado",
+      "timezoneruleversionnumber": "Número de Versão da Regra de Fuso Horário",
+      "utcconversiontimezonecode": "Código de Fuso Horário da Conversão UTC",
+      "versionnumber": "Número da Versão"
+    },
+    "PreferredName": "Feedbacks",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Feedbacks (Vistas)",
+    "Name": "_cra39_feedback_views",
+    "RelatedEntityName": "Feedbacks",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "158f3873-edf9-45d6-b7df-cb9d32396b48": "Vista de Pesquisa de Feedback",
+      "47bfbd20-c05a-499d-8086-d586addf691c": "Vista Associada de Feedback",
+      "99e2e16a-8878-4e91-bfaa-c8aa85defc30": "Entidades Feedbacks Ativas",
+      "ecdef953-faa2-4f1f-9429-6d8752d3eddd": "Vista Localização Avançada de Feedback",
+      "f6c74a55-cb86-4510-95fd-2123dadaec05": "Entidades Feedbacks Inativas"
+    }
+  },
+  {
+    "DisplayName": "Estado",
+    "Name": "cra39_estado",
+    "OptionSetInfoNameMapping": {
+      "1": "Submetido",
+      "2": "Aguardar Resposta",
+      "3": "Respondido/Fechado"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cra39_estado",
+        "OptionSetReferenceEntityName": "Feedbacks"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cra39_estado",
+    "RelatedEntityName": "Feedbacks",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Estado (Feedbacks)",
+    "Name": "cra39_feedback_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Ativo",
+      "1": "Inativo"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Feedbacks"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Feedbacks",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Razão do Estado (Feedbacks)",
+    "Name": "cra39_feedback_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Ativo",
+      "2": "Inativo"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Feedbacks"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Feedbacks",
+    "Type": "OptionSetInfo"
+  }
+]

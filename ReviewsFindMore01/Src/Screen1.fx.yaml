@@ -32,23 +32,33 @@ Screen1 As screen:
         Y: =15
         ZIndex: =3
 
+    Menu As icon.Hamburger:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        Color: =RGBA(241, 244, 249, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.Hamburger
+        X: =16
+        Y: =11
+        ZIndex: =4
+
     Button5 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(3, 121, 137, 1)
         FontWeight: =FontWeight.Semibold
-        Height: =Dropdown1.Height + 10
+        Height: =dp_ambito.Height + 10
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(3, 121, 137, 1), -20%)
         Size: =24
         Text: ="Botão"
-        Width: =Dropdown1.Width + 25
-        X: =Dropdown1.X -12
-        Y: =Dropdown1.Y - 4
+        Width: =dp_ambito.Width + 25
+        X: =dp_ambito.X -12
+        Y: =dp_ambito.Y - 4
         ZIndex: =6
 
-    Dropdown1 As dropdown:
+    dp_ambito As dropdown:
         BorderColor: =RGBA(69, 186, 184, 1)
         BorderThickness: =0
         ChevronBackground: =RGBA(3, 121, 137, 1)
@@ -91,7 +101,7 @@ Screen1 As screen:
         Size: =21
         Width: =575
         X: =32
-        Y: =371
+        Y: =462
         ZIndex: =7
 
     Button4 As button:
@@ -103,11 +113,18 @@ Screen1 As screen:
         Height: =70
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(3, 121, 137, 1), -20%)
+        OnSelect: |-
+            =Patch(
+               Feedbacks,
+               Defaults(Feedbacks),
+               { Tipo: dp_ambito.Selected.SampleStringField }
+            );
+            Navigate(Screen2, ScreenTransition.Fade)
         Size: =24
-        Text: ="Confirmar"
+        Text: ="Continuar"
         Width: =280
-        X: =159
-        Y: =501
+        X: =175
+        Y: =618
         ZIndex: =8
 
     Image1 As image:
@@ -118,14 +135,21 @@ Screen1 As screen:
         Image: =imageedit_2_3718430920
         Width: =526
         X: =52
-        Y: =191
+        Y: =165
         ZIndex: =9
 
-    MenuLeftNav_1 As MenuLeftNav:
-        HamburgerMenuColor: =RGBA(255, 255, 255, 1)
-        Height: =1120
-        MenuColor: =RGBA(3, 121, 137, 1)
-        Width: =373
-        Y: =15
-        ZIndex: =10
+    Label5_6 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(69, 186, 184, 1)
+        Color: =RGBA(29, 29, 29, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =93
+        Size: =54
+        Text: ="Feedback"
+        Width: =417
+        X: =111
+        Y: =296
+        ZIndex: =11
 

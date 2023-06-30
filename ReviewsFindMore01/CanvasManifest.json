@@ -111,11 +111,10 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "8675abbf-3a53-453e-9cc5-1b31ab1f1db4",
-    "Id": "413a26b7-486e-44a2-b58b-117345f64e54",
+    "Id": "de3ba618-83c1-4788-bd9d-4448ad77fce4",
     "InstrumentationKey": "",
-    "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
-    "Name": "ReviewsFindMore.msapp",
+    "Name": "ReviewsFindMore",
     "OriginatingVersion": "1.332",
     "ParserErrorCount": 0
   },
@@ -132,7 +131,7 @@
   },
   "ScreenOrder": [
     "Screen1",
-    "Scren 1",
-    "Scren 1_1"
+    "Screen2",
+    "Screen3"
   ]
 }

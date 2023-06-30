@@ -1,4 +1,4 @@
-"'Scren 1' As screen":
+Screen2 As screen:
     Fill: =RGBA(29, 29, 29, 1)
     LoadingSpinnerColor: =RGBA(3, 121, 137, 1)
 
@@ -6,11 +6,11 @@
         BorderColor: =RGBA(69, 186, 184, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =1050
+        Height: =1096
         Image: ='rm222-mind-14'
         ImagePosition: =ImagePosition.Fill
         Width: =640
-        Y: =86
+        Y: =40
         ZIndex: =1
 
     NavBar_1 As rectangle:
@@ -82,6 +82,9 @@
         Height: =70
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(230, 46, 46, 1), -20%)
+        OnSelect: |-
+            =Remove(Feedbacks, First(Filter(Feedbacks, Text(Id) = Text(Max(Feedbacks, Id)))));
+            Navigate(Screen1, ScreenTransition.Fade)
         Size: =24
         Text: ="Voltar"
         Width: =280
@@ -93,6 +96,7 @@
         BorderColor: =RGBA(69, 186, 184, 1)
         Color: =RGBA(29, 29, 29, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Semibold
         Height: =70
         Size: =21
         Text: ="Assunto"
@@ -116,7 +120,6 @@
         HoverBorderColor: =RGBA(69, 186, 184, 1)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(3, 121, 137, 1)
-        Italic: =true
         Size: =21
         Width: =560
         X: =39
@@ -127,6 +130,7 @@
         BorderColor: =RGBA(69, 186, 184, 1)
         Color: =RGBA(29, 29, 29, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Semibold
         Height: =70
         Size: =21
         Text: ="Mensagem"
@@ -141,11 +145,11 @@
         Color: =RGBA(29, 29, 29, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.Verdana
-        Height: =86
+        Height: =97
         Size: =36
-        Text: ="""Escolha dele"""
-        Width: =465
-        X: =88
+        Text: =First(Filter(Feedbacks, Text(Id) = Text(Max(Feedbacks, Id)))).Tipo
+        Width: =537
+        X: =52
         Y: =203
         ZIndex: =14
 
@@ -164,7 +168,6 @@
         HoverBorderColor: =RGBA(69, 186, 184, 1)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(3, 121, 137, 1)
-        Italic: =true
         Mode: =TextMode.MultiLine
         Size: =21
         Width: =560
@@ -228,6 +231,7 @@
         BorderColor: =RGBA(69, 186, 184, 1)
         Color: =RGBA(29, 29, 29, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Semibold
         Height: =70
         Size: =21
         Text: ="Tópico"
