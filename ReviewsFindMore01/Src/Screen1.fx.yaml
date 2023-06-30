@@ -123,8 +123,8 @@ Screen1 As screen:
         Size: =24
         Text: ="Continuar"
         Width: =280
-        X: =175
-        Y: =618
+        X: =180
+        Y: =629
         ZIndex: =8
 
     Image1 As image:
