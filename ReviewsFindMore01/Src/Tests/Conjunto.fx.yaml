@@ -1,0 +1,8 @@
+"'d7906ee7-3db5-4f06-9a62-1f99845198ac' As TestSuite":
+    Description: =""
+    DisplayName: ="Conjunto"
+
+    "'f9c86e87-1d13-472b-adc8-38cf88a5a697' As TestCase":
+        Description: =""
+        DisplayName: ="Maiúsculas/minúsculas"
+
