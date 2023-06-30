@@ -145,6 +145,7 @@ Screen2 As screen:
         Color: =RGBA(29, 29, 29, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
         Height: =97
         Size: =36
         Text: =First(Filter(Feedbacks, Text(Id) = Text(Max(Feedbacks, Id)))).Tipo
