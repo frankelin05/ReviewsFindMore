@@ -1,6 +1,8 @@
 Screen3 As screen:
     Fill: =RGBA(29, 29, 29, 1)
     LoadingSpinnerColor: =RGBA(3, 121, 137, 1)
+    OnVisible: |
+        =Reset(txt_PontoPositivo); Reset(txt_PontoNegativo); Reset(txt_outros);Reset(Rating1);
 
     Image2_2 As image:
         BorderColor: =RGBA(69, 186, 184, 1)
@@ -66,6 +68,16 @@ Screen3 As screen:
         Height: =70
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(3, 121, 137, 1), -20%)
+        OnSelect: |-
+            =Patch(
+               Feedbacks,
+               First(Filter(Feedbacks, Text(Id) = Text(Max(Feedbacks, Id)))),
+               { Avaliacao: Rating1.Value },
+               { PontoPositivo: txt_PontoPositivo.Text },
+               { PontoNegativo: txt_PontoNegativo.Text },
+               { OutrosPontos: txt_outros.Text }
+            );
+            Navigate(Screen4, ScreenTransition.Fade)
         Size: =24
         Text: ="Seguinte"
         Width: =280
@@ -82,6 +94,9 @@ Screen3 As screen:
         Height: =70
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(230, 46, 46, 1), -20%)
+        OnSelect: |-
+            =Remove(Feedbacks, First(Filter(Feedbacks, Text(Id) = Text(Max(Feedbacks, Id)))));
+            Navigate(Screen1, ScreenTransition.Fade)
         Size: =24
         Text: ="Voltar"
         Width: =280
@@ -102,7 +117,7 @@ Screen3 As screen:
         Y: =300
         ZIndex: =10
 
-    TextInput1_2 As text:
+    txt_PontoPositivo As text:
         BorderColor: =RGBA(69, 186, 184, 1)
         BorderThickness: =2
         Color: =RGBA(255, 255, 255, 1)
@@ -137,21 +152,7 @@ Screen3 As screen:
         Y: =765
         ZIndex: =13
 
-    Label5_4 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(69, 186, 184, 1)
-        Color: =RGBA(29, 29, 29, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Font: =Font.Verdana
-        Height: =86
-        Size: =36
-        Text: ="""Escolha dele"""
-        Width: =465
-        X: =88
-        Y: =203
-        ZIndex: =14
-
-    TextInput1_3 As text:
+    txt_outros As text:
         BorderColor: =RGBA(69, 186, 184, 1)
         BorderThickness: =2
         Color: =RGBA(255, 255, 255, 1)
@@ -207,7 +208,7 @@ Screen3 As screen:
         Y: =373
         ZIndex: =18
 
-    TextInput1_4 As text:
+    txt_PontoNegativo As text:
         BorderColor: =RGBA(69, 186, 184, 1)
         BorderThickness: =2
         Color: =RGBA(255, 255, 255, 1)
@@ -241,4 +242,21 @@ Screen3 As screen:
         X: =41
         Y: =606
         ZIndex: =20
+
+    Label5_4 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(69, 186, 184, 1)
+        Color: =RGBA(29, 29, 29, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =97
+        Size: =36
+        Text: |-
+            =
+            First(Filter(Feedbacks, Text(Id) = Text(Max(Feedbacks, Id)))).Tipo
+        Width: =573
+        X: =39
+        Y: =203
+        ZIndex: =21
 

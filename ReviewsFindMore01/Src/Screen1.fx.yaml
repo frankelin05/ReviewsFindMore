@@ -92,7 +92,7 @@ Screen1 As screen:
                     SampleStringField: "Pedido"
                 },
                 {
-                    SampleStringField: "Avaliação de Envento"
+                    SampleStringField: "Avaliação de Evento"
                 }
             )
         PressedBorderColor: =ColorFade(RGBA(3, 121, 137, 1), -20%)
@@ -114,13 +114,13 @@ Screen1 As screen:
         Height: =70
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(3, 121, 137, 1), -20%)
-        OnSelect: |-
+        OnSelect: |
             =Patch(
                Feedbacks,
                Defaults(Feedbacks),
                { Tipo: dp_ambito.Selected.SampleStringField }
             );
-            Navigate(Screen2, ScreenTransition.Fade)
+            If(dp_ambito.Selected.SampleStringField = "Avaliação de Evento", Navigate(Screen3, ScreenTransition.Fade), Navigate(Screen2, ScreenTransition.Fade))
         Size: =24
         Text: ="Continuar"
         Width: =280
