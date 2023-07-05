@@ -6,7 +6,6 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cra39_feedback",
-    "MaxGetRowsCount": 500,
     "Name": "Feedbacks",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Proprietário",
