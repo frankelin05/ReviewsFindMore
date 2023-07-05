@@ -2780,14 +2780,7 @@
           "DisabledFill",
           "PressedFill",
           "HoverFill",
-          {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "0",
-            "InvariantPropertyName": "X",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
+          "X",
           {
             "AFDDataSourceName": "",
             "AutoRuleBindingEnabled": false,
@@ -2929,19 +2922,19 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "Parent.Y",
+            "InvariantScript": "0",
             "Property": "Y",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "Parent.X",
+            "InvariantScript": "0",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "300",
+            "InvariantScript": "Parent.Width",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -3078,7 +3071,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638241424764819190",
+    "LastModifiedTimestamp": "638241436067993961",
     "Name": "MenuLeftNav",
     "Rules": [
       {
@@ -3250,7 +3243,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638241424764819190",
+  "LastModifiedTimestamp": "638241436067993961",
   "Name": "f9d0622eb1b6447d8ed9f668960a2817",
   "OverridableProperties": {},
   "TemplateOriginalName": "58907e171c654732b8b5aaaa44f0dc8c",
