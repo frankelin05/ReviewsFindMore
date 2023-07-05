@@ -172,8 +172,6 @@ Screen1 As screen:
                     MenuID: 2
                 }
             )
-        MenuWidth: =MenuLeftNav_1.SetMenuWidth
-        OnReset: =Set(showMenu, MenuLeftNav_1.ExpandMenu)
         Visible: =mostrarmenu
         Width: =265
         Y: =86
