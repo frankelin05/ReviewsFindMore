@@ -153,3 +153,12 @@ Screen1 As screen:
         Y: =296
         ZIndex: =11
 
+    MenuLeftNav_1 As MenuLeftNav:
+        Height: =1092
+        MenuColor: =RGBA(3, 121, 137, 1)
+        MenuWidth: =MenuLeftNav_1.SetMenuWidth
+        OnReset: =Set(showMenu, MenuLeftNav_1.ExpandMenu)
+        Width: =273
+        Y: =43
+        ZIndex: =12
+
