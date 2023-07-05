@@ -32,16 +32,6 @@ Screen2 As screen:
         Y: =15
         ZIndex: =3
 
-    Menu_1 As icon.Hamburger:
-        BorderColor: =RGBA(69, 186, 184, 1)
-        Color: =RGBA(241, 244, 249, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(244, 244, 244, 1)
-        Icon: =Icon.Hamburger
-        X: =16
-        Y: =11
-        ZIndex: =4
-
     Label5_1 As label:
         Align: =Align.Center
         BorderColor: =RGBA(69, 186, 184, 1)
