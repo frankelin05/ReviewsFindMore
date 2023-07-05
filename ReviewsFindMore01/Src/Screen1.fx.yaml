@@ -154,9 +154,9 @@ Screen1 As screen:
         ZIndex: =11
 
     MenuLeftNav_1 As MenuLeftNav:
-        Height: =1092
+        Height: =1050
         MenuColor: =RGBA(3, 121, 137, 1)
         Width: =273
-        Y: =43
+        Y: =86
         ZIndex: =12
 

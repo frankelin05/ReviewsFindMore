@@ -64,9 +64,7 @@ MenuLeftNav As CanvasComponent:
         Items: =Sort(MenuLeftNav.MenuItems, MenuID,SortOrder.Ascending)
         Layout: =Layout.Vertical
         TemplateSize: =280
-        Width: =300
-        X: =Parent.X
-        Y: =Parent.Y
+        Width: =Parent.Width
         ZIndex: =2
 
         rectShape_1 As rectangle:
