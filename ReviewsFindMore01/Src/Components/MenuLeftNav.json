@@ -26,7 +26,7 @@
             "Name": "galleryTemplate1_2",
             "Parent": "galMenu_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 40,
+            "PublishOrderIndex": 44,
             "Rules": [
               {
                 "Category": "Design",
@@ -101,7 +101,7 @@
             "Name": "rectShape_1",
             "Parent": "galMenu_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 41,
+            "PublishOrderIndex": 45,
             "Rules": [
               {
                 "Category": "Data",
@@ -346,7 +346,7 @@
             "Name": "btnClick_1",
             "Parent": "galMenu_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 42,
+            "PublishOrderIndex": 46,
             "Rules": [
               {
                 "Category": "Data",
@@ -676,7 +676,7 @@
             "Name": "icoMenu_1",
             "Parent": "galMenu_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 43,
+            "PublishOrderIndex": 47,
             "Rules": [
               {
                 "Category": "Data",
@@ -971,7 +971,7 @@
             "Name": "lblMenu_1",
             "Parent": "galMenu_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 44,
+            "PublishOrderIndex": 48,
             "Rules": [
               {
                 "Category": "Data",
@@ -1325,7 +1325,7 @@
         "Name": "galMenu_1",
         "Parent": "MenuLeftNav",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 39,
+        "PublishOrderIndex": 43,
         "Rules": [
           {
             "Category": "Data",
@@ -1574,7 +1574,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638241496503871070",
+    "LastModifiedTimestamp": "638241499923931110",
     "Name": "MenuLeftNav",
     "Rules": [
       {
@@ -1746,7 +1746,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638241496503871070",
+  "LastModifiedTimestamp": "638241499923931110",
   "Name": "f9d0622eb1b6447d8ed9f668960a2817",
   "OverridableProperties": {},
   "TemplateOriginalName": "58907e171c654732b8b5aaaa44f0dc8c",

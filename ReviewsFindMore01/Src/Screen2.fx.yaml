@@ -1,6 +1,8 @@
 Screen2 As screen:
     Fill: =RGBA(29, 29, 29, 1)
     LoadingSpinnerColor: =RGBA(3, 121, 137, 1)
+    OnVisible: |
+        =Reset(Txt_assunto); Reset(Txt_mensagem); Reset(Dropdown1_1);
 
     Image2_1 As image:
         BorderColor: =RGBA(69, 186, 184, 1)
@@ -56,6 +58,15 @@ Screen2 As screen:
         Height: =70
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(3, 121, 137, 1), -20%)
+        OnSelect: |-
+            =Patch(
+               Feedbacks,
+               First(Filter(Feedbacks, Text(Id) = Text(Max(Feedbacks, Id)))),
+               { Assunto: Txt_assunto.Text },
+               { Mensegem: Txt_mensagem.Text },
+               { Topicos: Dropdown1_1.Selected.SampleStringField }
+            );
+            Navigate(Screen4, ScreenTransition.Fade)
         Size: =24
         Text: ="Seguinte"
         Width: =280
@@ -95,7 +106,7 @@ Screen2 As screen:
         Y: =300
         ZIndex: =10
 
-    TextInput1 As text:
+    Txt_assunto As text:
         BorderColor: =RGBA(69, 186, 184, 1)
         BorderThickness: =2
         Color: =RGBA(255, 255, 255, 1)
@@ -138,14 +149,15 @@ Screen2 As screen:
         FontWeight: =FontWeight.Semibold
         Height: =97
         Size: =36
-        Text: |
+        Text: |-
             =
+            First(Filter(Feedbacks, Text(Id) = Text(Max(Feedbacks, Id)))).Tipo
         Width: =537
         X: =52
         Y: =203
         ZIndex: =14
 
-    TextInput1_1 As text:
+    Txt_mensagem As text:
         BorderColor: =RGBA(69, 186, 184, 1)
         BorderThickness: =2
         Color: =RGBA(255, 255, 255, 1)
