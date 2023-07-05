@@ -38,6 +38,7 @@ Screen1 As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.Hamburger
+        OnSelect: =Set(mostrarmenu, !mostrarmenu)
         X: =16
         Y: =11
         ZIndex: =4
@@ -156,7 +157,23 @@ Screen1 As screen:
     MenuLeftNav_1 As MenuLeftNav:
         Height: =1050
         MenuColor: =RGBA(3, 121, 137, 1)
-        Width: =273
+        MenuItems: |-
+            =Table(
+                {
+                    MenuLabel: "Home",
+                    MenuIcon: Icon.Home,
+                    MenuScreenNavigate: Screen1,
+                    MenuID: 1
+                },
+                {
+                    MenuLabel: "FeedBack's",
+                    MenuIcon: Icon.Mail,
+                    MenuScreenNavigate: Screen2,
+                    MenuID: 2
+                }
+            )
+        Visible: =mostrarmenu
+        Width: =265
         Y: =86
         ZIndex: =12
 
