@@ -1110,6 +1110,18 @@
               "message": {
                 "text": "Erro ao executar a regra app-InefficientDelayLoading."
               }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 7
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Erro ao executar a regra app-InefficientDelayLoading."
+              }
             }
           ]
         }

@@ -53,7 +53,8 @@ Screen3 As screen:
                { Avaliacao: Rating1.Value },
                { PontoPositivo: txt_PontoPositivo.Text },
                { PontoNegativo: txt_PontoNegativo.Text },
-               { OutrosPontos: txt_outros.Text }
+               { OutrosPontos: txt_outros.Text },
+               { Email: User().Email}
             );
             Navigate(Screen4, ScreenTransition.Fade)
         Size: =24

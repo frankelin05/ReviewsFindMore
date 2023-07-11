@@ -17,7 +17,7 @@ Screen5 As screen:
         ZIndex: =1
 
         Title2 As label:
-            Color: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(3, 121, 137, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =Self.Size * 1.8
@@ -31,11 +31,11 @@ Screen5 As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 86
             X: =16
-            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2.Size * 1.8)) / 2
+            Y: =23
             ZIndex: =1
 
         Subtitle2 As label:
-            Color: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(3, 121, 137, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =Self.Size * 1.8
@@ -48,14 +48,14 @@ Screen5 As screen:
             Text: =ThisItem.DataCriado
             VerticalAlign: =VerticalAlign.Top
             Width: =Title2.Width
-            X: =Title2.X
-            Y: =Title2.Y + Title2.Height
+            X: =15
+            Y: =59
             ZIndex: =2
 
         NextArrow2 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
             BorderColor: =RGBA(69, 186, 184, 1)
-            Color: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(29, 29, 29, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =59
@@ -90,6 +90,24 @@ Screen5 As screen:
             Visible: =ThisItem.IsSelected
             Width: =4
             ZIndex: =5
+
+        Subtitle2_1 As label:
+            Color: =RGBA(3, 121, 137, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =34
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =19
+            Text: =ThisItem.Email
+            VerticalAlign: =VerticalAlign.Top
+            Width: =366
+            X: =18
+            Y: =95
+            ZIndex: =6
 
     MenuLeftNav_2 As MenuLeftNav:
         Height: =1049

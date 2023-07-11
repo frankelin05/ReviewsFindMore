@@ -64,7 +64,8 @@ Screen2 As screen:
                First(Filter(Feedbacks, Text(Id) = Text(Max(Feedbacks, Id)))),
                { Assunto: Txt_assunto.Text },
                { Mensegem: Txt_mensagem.Text },
-               { Topicos: Dropdown1_1.Selected.SampleStringField }
+               { Topicos: Dropdown1_1.Selected.SampleStringField },
+               { Email: User().Email}
             );
             Navigate(Screen4, ScreenTransition.Fade)
         Size: =24
