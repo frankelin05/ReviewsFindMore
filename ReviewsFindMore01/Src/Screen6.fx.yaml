@@ -1,10 +1,10 @@
-Screen2 As screen:
+Screen6 As screen:
     Fill: =RGBA(29, 29, 29, 1)
     LoadingSpinnerColor: =RGBA(3, 121, 137, 1)
     OnVisible: |
-        =Reset(Txt_assunto); Reset(Txt_mensagem); Reset(Dropdown1_1);
+        =
 
-    Image2_1 As image:
+    Image2_3 As image:
         BorderColor: =RGBA(69, 186, 184, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -15,14 +15,14 @@ Screen2 As screen:
         Y: =40
         ZIndex: =1
 
-    NavBar_1 As rectangle:
+    NavBar_3 As rectangle:
         BorderColor: =RGBA(218, 241, 241, 1)
         Fill: =RGBA(3, 109, 123, 1)
         Height: =86
         Width: =640
         ZIndex: =2
 
-    Logout_1 As icon.Leave:
+    Logout_3 As icon.Leave:
         BorderColor: =RGBA(69, 186, 184, 1)
         Color: =RGBA(241, 244, 249, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -34,7 +34,7 @@ Screen2 As screen:
         Y: =15
         ZIndex: =3
 
-    Label5_1 As label:
+    Label5_5 As label:
         Align: =Align.Center
         BorderColor: =RGBA(69, 186, 184, 1)
         Color: =RGBA(29, 29, 29, 1)
@@ -49,32 +49,7 @@ Screen2 As screen:
         Y: =110
         ZIndex: =5
 
-    Button4_1 As button:
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(255, 255, 255, 1)
-        DisabledFill: =RGBA(3, 121, 137, 1)
-        Fill: =RGBA(3, 121, 137, 1)
-        FontWeight: =FontWeight.Semibold
-        Height: =70
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(3, 121, 137, 1), -20%)
-        OnSelect: |-
-            =Patch(
-               Feedbacks,
-               First(Filter(Feedbacks, Text(Id) = Text(Max(Feedbacks, Id)))),
-               { Assunto: Txt_assunto.Text },
-               { Mensegem: Txt_mensagem.Text },
-               { Topicos: Dropdown1_1.Selected.SampleStringField }
-            );
-            Navigate(Screen4, ScreenTransition.Fade)
-        Size: =24
-        Text: ="Seguinte"
-        Width: =280
-        X: =340
-        Y: =1024
-        ZIndex: =8
-
-    Voltar As button:
+    Voltar_2 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -83,17 +58,15 @@ Screen2 As screen:
         Height: =70
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(230, 46, 46, 1), -20%)
-        OnSelect: |-
-            =Remove(Feedbacks, First(Filter(Feedbacks, Text(Id) = Text(Max(Feedbacks, Id)))));
-            Navigate(Screen1, ScreenTransition.Fade)
+        OnSelect: =Navigate(Screen5, ScreenTransition.Fade)
         Size: =24
         Text: ="Voltar"
         Width: =280
-        X: =16
-        Y: =1024
+        X: =179
+        Y: =1010
         ZIndex: =9
 
-    Label1 As label:
+    Label1_7 As label:
         BorderColor: =RGBA(69, 186, 184, 1)
         Color: =RGBA(29, 29, 29, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -106,11 +79,11 @@ Screen2 As screen:
         Y: =300
         ZIndex: =10
 
-    Txt_assunto As text:
+    Txt_assunto_1 As text:
         BorderColor: =RGBA(69, 186, 184, 1)
         BorderThickness: =2
         Color: =RGBA(255, 255, 255, 1)
-        Default: =
+        Default: =LookUp(Feedbacks,Id = Title2.Text, Assunto)
         DisabledBorderColor: =RGBA(69, 186, 184, 1)
         DisabledColor: =RGBA(255, 255, 255, 1)
         DisabledFill: =RGBA(3, 121, 137, 1)
@@ -127,7 +100,7 @@ Screen2 As screen:
         Y: =370
         ZIndex: =11
 
-    Label1_1 As label:
+    Label1_8 As label:
         BorderColor: =RGBA(69, 186, 184, 1)
         Color: =RGBA(29, 29, 29, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -140,7 +113,7 @@ Screen2 As screen:
         Y: =464
         ZIndex: =13
 
-    Label5_2 As label:
+    Label5_7 As label:
         Align: =Align.Center
         BorderColor: =RGBA(69, 186, 184, 1)
         Color: =RGBA(29, 29, 29, 1)
@@ -149,19 +122,17 @@ Screen2 As screen:
         FontWeight: =FontWeight.Semibold
         Height: =97
         Size: =36
-        Text: |-
-            =
-            First(Filter(Feedbacks, Text(Id) = Text(Max(Feedbacks, Id)))).Tipo
+        Text: =LookUp(Feedbacks,Id = Title2.Text, Tipo)
         Width: =537
         X: =52
         Y: =203
         ZIndex: =14
 
-    Txt_mensagem As text:
+    Txt_mensagem_1 As text:
         BorderColor: =RGBA(69, 186, 184, 1)
         BorderThickness: =2
         Color: =RGBA(255, 255, 255, 1)
-        Default: =""
+        Default: =LookUp(Feedbacks,Id = Title2.Text, Mensegem)
         DisabledBorderColor: =RGBA(69, 186, 184, 1)
         DisabledColor: =RGBA(255, 255, 255, 1)
         DisabledFill: =RGBA(3, 121, 137, 1)
@@ -179,59 +150,7 @@ Screen2 As screen:
         Y: =534
         ZIndex: =15
 
-    Dropdown1_1 As dropdown:
-        BorderColor: =RGBA(69, 186, 184, 1)
-        BorderThickness: =0
-        ChevronBackground: =RGBA(3, 121, 137, 1)
-        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-        ChevronHoverBackground: =ColorFade(RGBA(3, 121, 137, 1), -20%)
-        ChevronHoverFill: =RGBA(255, 255, 255, 1)
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(3, 121, 137, 1)
-        Fill: =RGBA(3, 121, 137, 1)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Lighter
-        Height: =70
-        HoverColor: =RGBA(237, 237, 237, 1)
-        HoverFill: =RGBA(3, 121, 137, 1)
-        Items: |-
-            =Table(
-                {
-                    SampleStringField: "Eventos"
-                },
-                {
-                    SampleStringField: "Escritório"
-                },
-                {
-                    SampleStringField: "Cliente"
-                },
-                {
-                    SampleStringField: "Trabalho diário"
-                },
-                {
-                    SampleStringField: "Viagens"
-                },
-                    {
-                    SampleStringField: "Gestão"
-                },
-                    {
-                    SampleStringField: "Outros"
-                }
-            )
-        PressedBorderColor: =ColorFade(RGBA(3, 121, 137, 1), -20%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(3, 121, 137, 1)
-        SelectionFill: =RGBA(3, 121, 137, 1)
-        Size: =21
-        Width: =558
-        X: =41
-        Y: =865
-        ZIndex: =16
-
-    Label1_2 As label:
+    Label1_9 As label:
         BorderColor: =RGBA(69, 186, 184, 1)
         Color: =RGBA(29, 29, 29, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -243,4 +162,25 @@ Screen2 As screen:
         X: =39
         Y: =795
         ZIndex: =17
+
+    Txt_assunto_2 As text:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        Default: =LookUp(Feedbacks,Id = Title2.Text, Topicos)
+        DisabledBorderColor: =RGBA(69, 186, 184, 1)
+        DisabledColor: =RGBA(255, 255, 255, 1)
+        DisabledFill: =RGBA(3, 121, 137, 1)
+        Fill: =RGBA(3, 121, 137, 1)
+        FocusedBorderThickness: =4
+        Height: =70
+        HintText: ="..."
+        HoverBorderColor: =RGBA(69, 186, 184, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(3, 121, 137, 1)
+        Size: =21
+        Width: =560
+        X: =41
+        Y: =865
+        ZIndex: =18
 

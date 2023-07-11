@@ -1,7 +1,7 @@
 {
   "FormatVersion": "0.24",
   "Header": {
-    "DocVersion": "1.332",
+    "DocVersion": "1.333",
     "MinVersionToLoad": "1.331",
     "MSAppStructureVersion": "2.0"
   },
@@ -42,7 +42,6 @@
       "enableonstart": true,
       "enableonstartnavigate": false,
       "enablepcfmoderndatasets": true,
-      "enablepowerautomatepane": true,
       "enablerowscopeonetonexpand": false,
       "enablerpawarecomponentdependency": true,
       "enablerulespanel": false,
@@ -98,7 +97,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 0,
+    "BindingErrorCount": 1,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Phone",
@@ -116,7 +115,8 @@
     "ManualOfflineProfileId": "",
     "Name": "ReviewsFindMore",
     "OriginatingVersion": "1.332",
-    "ParserErrorCount": 0
+    "ParserErrorCount": 2,
+    "ShowStatusBar": false
   },
   "PublishInfo": {
     "AppName": "ReviewsFindMore",
@@ -133,6 +133,9 @@
     "Screen1",
     "Screen2",
     "Screen3",
-    "Screen4"
+    "Screen4",
+    "Screen5",
+    "Screen6",
+    "Screen7"
   ]
 }

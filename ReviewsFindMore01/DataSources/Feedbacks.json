@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cra39_feedback",
+    "MaxGetRowsCount": 500,
     "Name": "Feedbacks",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Proprietário",
@@ -31,7 +32,7 @@
       "cra39_tipo": "Tipo",
       "cra39_topicos": "Topicos",
       "createdby": "Criado Por",
-      "createdon": "Criado Em",
+      "createdon": "DataCriado",
       "createdonbehalfby": "Criado Por (Delegado)",
       "importsequencenumber": "Número de Sequência da Importação",
       "modifiedby": "Modificado Por",

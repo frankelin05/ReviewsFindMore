@@ -1,0 +1,134 @@
+Screen5 As screen:
+    BackgroundImage: ='rm222-mind-14'
+    Fill: =RGBA(29, 29, 29, 1)
+    ImagePosition: =ImagePosition.Fill
+    LoadingSpinnerColor: =RGBA(3, 121, 137, 1)
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+        BorderColor: =RGBA(69, 186, 184, 1)
+        DelayItemLoading: =true
+        Height: =1048
+        Items: =Feedbacks
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =150
+        Y: =86
+        ZIndex: =1
+
+        Title2 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =19
+            Text: =ThisItem.Id
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 86
+            X: =16
+            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2.Size * 1.8)) / 2
+            ZIndex: =1
+
+        Subtitle2 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =19
+            Text: =ThisItem.DataCriado
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title2.Width
+            X: =Title2.X
+            Y: =Title2.Y + Title2.Height
+            ZIndex: =2
+
+        NextArrow2 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(69, 186, 184, 1)
+            Color: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =59
+            Icon: =Icon.ChevronRight
+            OnSelect: |-
+                =Select(Parent);
+                If(ThisItem.Tipo = "Avaliação de Evento",Navigate(Screen7, ScreenTransition.None, {Id: Title2.Text}),Navigate(Screen6, ScreenTransition.None, {Id: Title2.Text}))
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="Ver detalhes do item"
+            Width: =88
+            X: =539
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =3
+
+        Separator2 As rectangle:
+            BorderColor: =RGBA(69, 186, 184, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =4
+
+        Rectangle2 As rectangle:
+            BorderColor: =RGBA(69, 186, 184, 1)
+            Fill: =RGBA(69, 186, 184, 1)
+            Height: =Parent.TemplateHeight - Separator2.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =5
+
+    MenuLeftNav_2 As MenuLeftNav:
+        Height: =1049
+        MenuColor: =RGBA(3, 121, 137, 1)
+        MenuItems: |-
+            =Table(
+                {
+                    MenuLabel: "Home",
+                    MenuIcon: Icon.Home,
+                    MenuScreenNavigate: Screen1,
+                    MenuID: 1
+                },
+                {
+                    MenuLabel: "FeedBack's",
+                    MenuIcon: Icon.Mail,
+                    MenuScreenNavigate: Screen5,
+                    MenuID: 2
+                }
+            )
+        Visible: =mostrarmenu
+        Width: =265
+        Y: =86
+        ZIndex: =2
+
+    NavBar_5 As rectangle:
+        BorderColor: =RGBA(218, 241, 241, 1)
+        Fill: =RGBA(3, 109, 123, 1)
+        Height: =86
+        Width: =640
+        ZIndex: =3
+
+    Menu_1 As icon.Hamburger:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        Color: =RGBA(241, 244, 249, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.Hamburger
+        OnSelect: =Set(mostrarmenu, !mostrarmenu)
+        X: =16
+        Y: =11
+        ZIndex: =4
+

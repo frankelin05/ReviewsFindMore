@@ -168,7 +168,7 @@ Screen1 As screen:
                 {
                     MenuLabel: "FeedBack's",
                     MenuIcon: Icon.Mail,
-                    MenuScreenNavigate: Screen2,
+                    MenuScreenNavigate: Screen5,
                     MenuID: 2
                 }
             )
