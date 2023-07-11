@@ -26,7 +26,7 @@
             "Name": "galleryTemplate1_2",
             "Parent": "galMenu_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 81,
+            "PublishOrderIndex": 77,
             "Rules": [
               {
                 "Category": "Design",
@@ -101,7 +101,7 @@
             "Name": "rectShape_1",
             "Parent": "galMenu_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 82,
+            "PublishOrderIndex": 78,
             "Rules": [
               {
                 "Category": "Data",
@@ -346,7 +346,7 @@
             "Name": "btnClick_1",
             "Parent": "galMenu_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 83,
+            "PublishOrderIndex": 79,
             "Rules": [
               {
                 "Category": "Data",
@@ -566,7 +566,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Navigate(ThisItem.MenuScreenNavigate,ScreenTransition.Cover )",
+                "InvariantScript": "Navigate(ThisItem.MenuScreenNavigate,ScreenTransition.Fade )",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -676,7 +676,7 @@
             "Name": "icoMenu_1",
             "Parent": "galMenu_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 84,
+            "PublishOrderIndex": 80,
             "Rules": [
               {
                 "Category": "Data",
@@ -971,7 +971,7 @@
             "Name": "lblMenu_1",
             "Parent": "galMenu_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 85,
+            "PublishOrderIndex": 81,
             "Rules": [
               {
                 "Category": "Data",
@@ -1318,7 +1318,7 @@
         "Name": "galMenu_1",
         "Parent": "MenuLeftNav",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 80,
+        "PublishOrderIndex": 76,
         "Rules": [
           {
             "Category": "Data",
@@ -1518,14 +1518,7 @@
         "IsLockable": false,
         "NameMapSourceSchema": "?"
       },
-      {
-        "AFDDataSourceName": "",
-        "AutoRuleBindingEnabled": false,
-        "AutoRuleBindingString": "",
-        "InvariantPropertyName": "OnReset",
-        "IsLockable": false,
-        "NameMapSourceSchema": "?"
-      },
+      "OnReset",
       {
         "AFDDataSourceName": "",
         "AutoRuleBindingEnabled": false,
@@ -1567,7 +1560,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638246656667136404",
+    "LastModifiedTimestamp": "638246675067503855",
     "Name": "MenuLeftNav",
     "Rules": [
       {
@@ -1650,7 +1643,7 @@
       },
       {
         "Category": "Behavior",
-        "InvariantScript": "Set(showMenu, MenuLeftNav.ExpandMenu)",
+        "InvariantScript": "",
         "Property": "OnReset",
         "RuleProviderType": "System"
       }
@@ -1739,7 +1732,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638246656667136404",
+  "LastModifiedTimestamp": "638246675067503855",
   "Name": "f9d0622eb1b6447d8ed9f668960a2817",
   "OverridableProperties": {},
   "TemplateOriginalName": "58907e171c654732b8b5aaaa44f0dc8c",

@@ -1124,14 +1124,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "OnReset",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "OnReset",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,

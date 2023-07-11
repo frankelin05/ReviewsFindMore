@@ -50,7 +50,7 @@ MenuLeftNav As CanvasComponent:
             }
         )
     MenuWidth: =MenuLeftNav.SetMenuWidth
-    OnReset: =Set(showMenu, MenuLeftNav.ExpandMenu)
+    OnReset: =
     SetMenuWidth: =300
     Width: =MenuLeftNav.MenuWidth
     X: =0
@@ -116,7 +116,7 @@ MenuLeftNav As CanvasComponent:
             Height: =84
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =Color.Transparent
-            OnSelect: =Navigate(ThisItem.MenuScreenNavigate,ScreenTransition.Cover )
+            OnSelect: =Navigate(ThisItem.MenuScreenNavigate,ScreenTransition.Fade )
             PressedFill: =RGBA(0,0,0,0)
             Size: =24
             Text: =""
