@@ -8,7 +8,7 @@ Screen5 As screen:
         BorderColor: =RGBA(69, 186, 184, 1)
         DelayItemLoading: =true
         Height: =1048
-        Items: =Feedbacks
+        Items: =Sort(Feedbacks,Id,SortOrder.Descending)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
