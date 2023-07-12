@@ -193,6 +193,7 @@ Screen6 As screen:
             Navigate(Screen4, ScreenTransition.Fade)
         Size: =24
         Text: ="Submeter"
+        Visible: =If(ScreenAnterior = "Screen8",false,true)
         Width: =280
         X: =321
         Y: =1020

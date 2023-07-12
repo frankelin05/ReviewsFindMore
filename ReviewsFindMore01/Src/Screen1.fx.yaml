@@ -113,7 +113,7 @@ Screen1 As screen:
         Text: ="Continuar"
         Width: =280
         X: =180
-        Y: =629
+        Y: =619
         ZIndex: =8
 
     Image1 As image:
