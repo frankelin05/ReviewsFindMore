@@ -111,7 +111,6 @@ Screen3 As screen:
         HoverBorderColor: =RGBA(69, 186, 184, 1)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(3, 121, 137, 1)
-        Italic: =true
         Size: =21
         Width: =560
         X: =41
@@ -146,7 +145,6 @@ Screen3 As screen:
         HoverBorderColor: =RGBA(69, 186, 184, 1)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(3, 121, 137, 1)
-        Italic: =true
         Mode: =TextMode.MultiLine
         Size: =21
         Width: =560
@@ -202,7 +200,6 @@ Screen3 As screen:
         HoverBorderColor: =RGBA(69, 186, 184, 1)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(3, 121, 137, 1)
-        Italic: =true
         Size: =21
         Width: =560
         X: =42
