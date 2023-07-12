@@ -8,7 +8,7 @@ Screen8 As screen:
         BorderColor: =RGBA(69, 186, 184, 1)
         DelayItemLoading: =true
         Height: =1048
-        Items: =LookUp(Feedbacks,Email = User().Email)
+        Items: =Filter(Feedbacks, Email = User().Email)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
@@ -62,14 +62,14 @@ Screen8 As screen:
             Icon: =Icon.ChevronRight
             OnSelect: |-
                 =Select(Parent);
-                If(ThisItem.Tipo = "Avaliação de Evento",Navigate(Screen7, ScreenTransition.None, {Id: Title2_1.Text}),Navigate(Screen6, ScreenTransition.None, {Id: Title2_1.Text}))
+                If(ThisItem.Tipo = "Avaliação de Evento",Navigate(Screen7, ScreenTransition.None, {ID_FeedBacks: Title2_1.Text,ScreenAnterior: "Screen8"}),Navigate(Screen6, ScreenTransition.None, {ID_FeedBacks: Title2_1.Text,ScreenAnterior: "Screen8"}))
             PaddingBottom: =16
             PaddingLeft: =16
             PaddingRight: =16
             PaddingTop: =16
             Tooltip: ="Ver detalhes do item"
             Width: =88
-            X: =539
+            X: =549
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =3
 
@@ -102,28 +102,27 @@ Screen8 As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =19
-            Text: =ThisItem.Assunto
+            Text: =ThisItem.Email
             VerticalAlign: =VerticalAlign.Top
             Width: =366
             X: =18
             Y: =95
             ZIndex: =6
 
-        Button1 As button:
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        Label2 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(69, 186, 184, 1)
+            Color: =RGBA(255, 255, 255, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(3, 121, 137, 1)
-            FontWeight: =FontWeight.Semibold
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(3, 121, 137, 1), -20%)
+            Fill: =If(IsBlank(ThisItem.Resposta),Color.Red,Color.Green)
+            Height: =55
             OnSelect: =Select(Parent)
-            Size: =24
-            Text: =""
-            Width: =193
-            X: =363
-            Y: =55
-            ZIndex: =7
+            Size: =19
+            Text: =If(IsBlank(ThisItem.Resposta),"Por Responder","Respondido")
+            Width: =211
+            X: =335
+            Y: =45
+            ZIndex: =8
 
     MenuLeftNav_3 As MenuLeftNav:
         Height: =1049

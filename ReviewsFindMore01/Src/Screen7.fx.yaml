@@ -46,7 +46,7 @@ Screen7 As screen:
         Height: =70
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(230, 46, 46, 1), -20%)
-        OnSelect: =Navigate(Screen5, ScreenTransition.Fade)
+        OnSelect: =If(ScreenAnterior = "Screen8",Navigate(Screen8, ScreenTransition.Fade),Navigate(Screen5, ScreenTransition.Fade))
         Size: =24
         Text: ="Voltar"
         Width: =280
@@ -71,10 +71,11 @@ Screen7 As screen:
         BorderColor: =RGBA(69, 186, 184, 1)
         BorderThickness: =2
         Color: =RGBA(255, 255, 255, 1)
-        Default: =LookUp(Feedbacks,Id = Title2.Text, PontoPositivo)
+        Default: =LookUp(Feedbacks,Id = ID_FeedBacks, PontoPositivo)
         DisabledBorderColor: =RGBA(69, 186, 184, 1)
         DisabledColor: =RGBA(255, 255, 255, 1)
         DisabledFill: =RGBA(3, 121, 137, 1)
+        DisplayMode: =DisplayMode.View
         Fill: =RGBA(3, 121, 137, 1)
         FocusedBorderThickness: =4
         Height: =70
@@ -106,10 +107,11 @@ Screen7 As screen:
         BorderColor: =RGBA(69, 186, 184, 1)
         BorderThickness: =2
         Color: =RGBA(255, 255, 255, 1)
-        Default: =LookUp(Feedbacks,Id = Title2.Text, OutrosPontos)
+        Default: =LookUp(Feedbacks,Id = ID_FeedBacks, OutrosPontos)
         DisabledBorderColor: =RGBA(69, 186, 184, 1)
         DisabledColor: =RGBA(255, 255, 255, 1)
         DisabledFill: =RGBA(3, 121, 137, 1)
+        DisplayMode: =DisplayMode.View
         Fill: =RGBA(3, 121, 137, 1)
         FocusedBorderThickness: =4
         Height: =143
@@ -121,7 +123,7 @@ Screen7 As screen:
         Mode: =TextMode.MultiLine
         Size: =21
         Width: =560
-        X: =44
+        X: =48
         Y: =736
         ZIndex: =15
 
@@ -142,10 +144,10 @@ Screen7 As screen:
         BorderColor: =RGBA(69, 186, 184, 1)
         BorderStyle: =BorderStyle.Solid
         BorderThickness: =0
-        Default: =LookUp(Feedbacks,Id = Title2.Text, Avaliacao)
+        Default: =LookUp(Feedbacks,Id = ID_FeedBacks, Avaliacao)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =Self.Fill
-        DisplayMode: =DisplayMode.Edit
+        DisplayMode: =DisplayMode.View
         Fill: =RGBA(0, 0, 0, 0)
         FocusedBorderColor: =Self.BorderColor
         FocusedBorderThickness: =2
@@ -162,10 +164,11 @@ Screen7 As screen:
         BorderColor: =RGBA(69, 186, 184, 1)
         BorderThickness: =2
         Color: =RGBA(255, 255, 255, 1)
-        Default: =LookUp(Feedbacks,Id = Title2.Text, PontoNegativo)
+        Default: =LookUp(Feedbacks,Id = ID_FeedBacks, PontoNegativo)
         DisabledBorderColor: =RGBA(69, 186, 184, 1)
         DisabledColor: =RGBA(255, 255, 255, 1)
         DisabledFill: =RGBA(3, 121, 137, 1)
+        DisplayMode: =DisplayMode.View
         Fill: =RGBA(3, 121, 137, 1)
         FocusedBorderThickness: =4
         Height: =70
@@ -176,7 +179,7 @@ Screen7 As screen:
         Italic: =true
         Size: =21
         Width: =560
-        X: =42
+        X: =48
         Y: =627
         ZIndex: =19
 
@@ -203,7 +206,7 @@ Screen7 As screen:
         Height: =97
         Size: =36
         Text: |-
-            =LookUp(Feedbacks,Id = Title2.Text, Tipo
+            =LookUp(Feedbacks,Id = ID_FeedBacks, Tipo
             )
         Width: =573
         X: =39
@@ -219,6 +222,12 @@ Screen7 As screen:
         Height: =70
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(3, 121, 137, 1), -20%)
+        OnSelect: |-
+            =Patch(
+               Feedbacks,
+               LookUp(Feedbacks, Id = ID_FeedBacks),
+               {Resposta: txt_outros_2.Text}
+            )
         Size: =24
         Text: ="Submeter"
         Width: =280
@@ -243,10 +252,11 @@ Screen7 As screen:
         BorderColor: =RGBA(69, 186, 184, 1)
         BorderThickness: =2
         Color: =RGBA(255, 255, 255, 1)
-        Default: =LookUp(Feedbacks,Id = Title2.Text, OutrosPontos)
+        Default: =LookUp(Feedbacks,Id = ID_FeedBacks, Resposta)
         DisabledBorderColor: =RGBA(69, 186, 184, 1)
         DisabledColor: =RGBA(255, 255, 255, 1)
         DisabledFill: =RGBA(3, 121, 137, 1)
+        DisplayMode: =If(IsBlank(LookUp(Feedbacks,Id = ID_FeedBacks, Resposta)) && ScreenAnterior <> "Screen8",DisplayMode.Edit,DisplayMode.Disabled)
         Fill: =RGBA(3, 121, 137, 1)
         FocusedBorderThickness: =4
         Height: =97

@@ -62,7 +62,7 @@ Screen5 As screen:
             Icon: =Icon.ChevronRight
             OnSelect: |-
                 =Select(Parent);
-                If(ThisItem.Tipo = "Avaliação de Evento",Navigate(Screen7, ScreenTransition.None, {Id: Title2.Text}),Navigate(Screen6, ScreenTransition.None, {Id: Title2.Text}))
+                If(ThisItem.Tipo = "Avaliação de Evento",Navigate(Screen7, ScreenTransition.None, {ID_FeedBacks: Title2.Text,ScreenAnterior: "Screen5"}),Navigate(Screen6, ScreenTransition.None, {ID_FeedBacks: Title2.Text,ScreenAnterior:"Screen5"}))
             PaddingBottom: =16
             PaddingLeft: =16
             PaddingRight: =16

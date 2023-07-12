@@ -46,12 +46,14 @@ Screen6 As screen:
         Height: =70
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(230, 46, 46, 1), -20%)
-        OnSelect: =Navigate(Screen5, ScreenTransition.Fade)
+        OnSelect: |
+            =If(ScreenAnterior = "Screen8",Navigate(Screen8, ScreenTransition.Fade),Navigate(Screen5, ScreenTransition.Fade));
+            Txt_mensagem_2.Text = ""
         Size: =24
         Text: ="Voltar"
         Width: =280
-        X: =179
-        Y: =1010
+        X: =29
+        Y: =1020
         ZIndex: =9
 
     Label1_7 As label:
@@ -63,7 +65,7 @@ Screen6 As screen:
         Size: =21
         Text: ="Assunto"
         Width: =560
-        X: =41
+        X: =31
         Y: =300
         ZIndex: =10
 
@@ -71,10 +73,11 @@ Screen6 As screen:
         BorderColor: =RGBA(69, 186, 184, 1)
         BorderThickness: =2
         Color: =RGBA(255, 255, 255, 1)
-        Default: =LookUp(Feedbacks,Id = Title2.Text, Assunto)
+        Default: =LookUp(Feedbacks,Id = ID_FeedBacks, Assunto)
         DisabledBorderColor: =RGBA(69, 186, 184, 1)
         DisabledColor: =RGBA(255, 255, 255, 1)
         DisabledFill: =RGBA(3, 121, 137, 1)
+        DisplayMode: =DisplayMode.View
         Fill: =RGBA(3, 121, 137, 1)
         FocusedBorderThickness: =4
         Height: =70
@@ -93,12 +96,11 @@ Screen6 As screen:
         Color: =RGBA(29, 29, 29, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Semibold
-        Height: =70
         Size: =21
         Text: ="Mensagem"
         Width: =560
-        X: =41
-        Y: =464
+        X: =31
+        Y: =444
         ZIndex: =13
 
     Label5_7 As label:
@@ -110,7 +112,7 @@ Screen6 As screen:
         FontWeight: =FontWeight.Semibold
         Height: =97
         Size: =36
-        Text: =LookUp(Feedbacks,Id = Title2.Text, Tipo)
+        Text: =LookUp(Feedbacks,Id = ID_FeedBacks, Tipo)
         Width: =537
         X: =52
         Y: =203
@@ -120,10 +122,11 @@ Screen6 As screen:
         BorderColor: =RGBA(69, 186, 184, 1)
         BorderThickness: =2
         Color: =RGBA(255, 255, 255, 1)
-        Default: =LookUp(Feedbacks,Id = Title2.Text, Mensegem)
+        Default: =LookUp(Feedbacks,Id = ID_FeedBacks, Mensegem)
         DisabledBorderColor: =RGBA(69, 186, 184, 1)
         DisabledColor: =RGBA(255, 255, 255, 1)
         DisabledFill: =RGBA(3, 121, 137, 1)
+        DisplayMode: =DisplayMode.View
         Fill: =RGBA(3, 121, 137, 1)
         FocusedBorderThickness: =4
         Height: =238
@@ -135,7 +138,7 @@ Screen6 As screen:
         Size: =21
         Width: =560
         X: =39
-        Y: =534
+        Y: =494
         ZIndex: =15
 
     Label1_9 As label:
@@ -143,19 +146,19 @@ Screen6 As screen:
         Color: =RGBA(29, 29, 29, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Semibold
-        Height: =70
+        Height: =34
         Size: =21
         Text: ="Tópico"
         Width: =560
         X: =39
-        Y: =795
+        Y: =741
         ZIndex: =17
 
     Txt_assunto_2 As text:
         BorderColor: =RGBA(69, 186, 184, 1)
         BorderThickness: =2
         Color: =RGBA(255, 255, 255, 1)
-        Default: =LookUp(Feedbacks,Id = Title2.Text, Topicos)
+        Default: =LookUp(Feedbacks,Id = ID_FeedBacks, Topicos)
         DisabledBorderColor: =RGBA(69, 186, 184, 1)
         DisabledColor: =RGBA(255, 255, 255, 1)
         DisabledFill: =RGBA(3, 121, 137, 1)
@@ -168,7 +171,65 @@ Screen6 As screen:
         HoverFill: =RGBA(3, 121, 137, 1)
         Size: =21
         Width: =560
-        X: =41
-        Y: =865
+        X: =42
+        Y: =780
         ZIndex: =18
+
+    Button2_1 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(3, 121, 137, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(3, 121, 137, 1), -20%)
+        OnSelect: |-
+            =Patch(
+               Feedbacks,
+               LookUp(Feedbacks, Id = ID_FeedBacks),
+               {Resposta: Txt_mensagem_2.Text}
+            )
+        Size: =24
+        Text: ="Submeter"
+        Width: =280
+        X: =321
+        Y: =1020
+        ZIndex: =19
+
+    Label1_15 As label:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        Color: =RGBA(29, 29, 29, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =34
+        Size: =21
+        Text: ="Resposta"
+        Width: =560
+        X: =32
+        Y: =860
+        ZIndex: =20
+
+    Txt_mensagem_2 As text:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        Default: =LookUp(Feedbacks,Id=ID_FeedBacks).Resposta
+        DisabledBorderColor: =RGBA(69, 186, 184, 1)
+        DisabledColor: =RGBA(255, 255, 255, 1)
+        DisabledFill: =RGBA(3, 121, 137, 1)
+        DisplayMode: =If(IsBlank(LookUp(Feedbacks,Id = ID_FeedBacks, Resposta)) && ScreenAnterior <> "Screen8",DisplayMode.Edit,DisplayMode.Disabled)
+        Fill: =RGBA(3, 121, 137, 1)
+        FocusedBorderThickness: =4
+        Height: =106
+        HintText: ="..."
+        HoverBorderColor: =RGBA(69, 186, 184, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(3, 121, 137, 1)
+        Mode: =TextMode.MultiLine
+        Size: =21
+        Width: =549
+        X: =41
+        Y: =894
+        ZIndex: =21
 
