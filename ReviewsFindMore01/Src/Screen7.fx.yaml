@@ -227,7 +227,8 @@ Screen7 As screen:
                Feedbacks,
                LookUp(Feedbacks, Id = ID_FeedBacks),
                {Resposta: txt_outros_2.Text}
-            )
+            );
+            Navigate(Screen4, ScreenTransition.Fade)
         Size: =24
         Text: ="Submeter"
         Width: =280
