@@ -50,7 +50,7 @@ Screen7 As screen:
         Size: =24
         Text: ="Voltar"
         Width: =280
-        X: =171
+        X: =44
         Y: =1025
         ZIndex: =9
 
@@ -86,7 +86,7 @@ Screen7 As screen:
         Size: =21
         Width: =560
         X: =41
-        Y: =522
+        Y: =504
         ZIndex: =11
 
     Label1_13 As label:
@@ -94,12 +94,12 @@ Screen7 As screen:
         Color: =RGBA(29, 29, 29, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Semibold
-        Height: =70
+        Height: =41
         Size: =21
         Text: ="Outros"
         Width: =560
         X: =42
-        Y: =765
+        Y: =694
         ZIndex: =13
 
     txt_outros_1 As text:
@@ -122,7 +122,7 @@ Screen7 As screen:
         Size: =21
         Width: =560
         X: =44
-        Y: =835
+        Y: =736
         ZIndex: =15
 
     Label1_11 As label:
@@ -135,7 +135,7 @@ Screen7 As screen:
         Text: ="Pontos Positivos"
         Width: =560
         X: =40
-        Y: =452
+        Y: =434
         ZIndex: =17
 
     Rating1_1 As rating:
@@ -155,7 +155,7 @@ Screen7 As screen:
         RatingFill: =RGBA(69, 186, 184, 1)
         Width: =350
         X: =41
-        Y: =373
+        Y: =355
         ZIndex: =18
 
     txt_PontoNegativo_1 As text:
@@ -177,7 +177,7 @@ Screen7 As screen:
         Size: =21
         Width: =560
         X: =42
-        Y: =676
+        Y: =627
         ZIndex: =19
 
     Label1_12 As label:
@@ -185,12 +185,12 @@ Screen7 As screen:
         Color: =RGBA(29, 29, 29, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Semibold
-        Height: =70
+        Height: =57
         Size: =21
         Text: ="Pontos Negativos"
         Width: =560
         X: =41
-        Y: =606
+        Y: =574
         ZIndex: =20
 
     Label5_9 As label:
@@ -209,4 +209,56 @@ Screen7 As screen:
         X: =39
         Y: =203
         ZIndex: =21
+
+    Button2 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(3, 121, 137, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(3, 121, 137, 1), -20%)
+        Size: =24
+        Text: ="Submeter"
+        Width: =280
+        X: =332
+        Y: =1025
+        ZIndex: =22
+
+    Label1_14 As label:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        Color: =RGBA(29, 29, 29, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =21
+        Text: ="Resposta"
+        Width: =560
+        X: =44
+        Y: =879
+        ZIndex: =24
+
+    txt_outros_2 As text:
+        BorderColor: =RGBA(69, 186, 184, 1)
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        Default: =LookUp(Feedbacks,Id = Title2.Text, OutrosPontos)
+        DisabledBorderColor: =RGBA(69, 186, 184, 1)
+        DisabledColor: =RGBA(255, 255, 255, 1)
+        DisabledFill: =RGBA(3, 121, 137, 1)
+        Fill: =RGBA(3, 121, 137, 1)
+        FocusedBorderThickness: =4
+        Height: =97
+        HintText: ="..."
+        HoverBorderColor: =RGBA(69, 186, 184, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(3, 121, 137, 1)
+        Italic: =true
+        Mode: =TextMode.MultiLine
+        Size: =21
+        Width: =560
+        X: =48
+        Y: =914
+        ZIndex: =25
 

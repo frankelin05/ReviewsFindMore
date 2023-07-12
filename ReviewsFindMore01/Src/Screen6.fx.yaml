@@ -22,18 +22,6 @@ Screen6 As screen:
         Width: =640
         ZIndex: =2
 
-    Logout_3 As icon.Leave:
-        BorderColor: =RGBA(69, 186, 184, 1)
-        Color: =RGBA(241, 244, 249, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(244, 244, 244, 1)
-        Height: =55
-        Icon: =Icon.Leave
-        Width: =47
-        X: =578
-        Y: =15
-        ZIndex: =3
-
     Label5_5 As label:
         Align: =Align.Center
         BorderColor: =RGBA(69, 186, 184, 1)

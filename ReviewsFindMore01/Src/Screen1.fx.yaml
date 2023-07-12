@@ -158,6 +158,12 @@ Screen1 As screen:
                     MenuIcon: Icon.Mail,
                     MenuScreenNavigate: Screen5,
                     MenuID: 2
+                },
+                {
+                    MenuLabel: "Respostas",
+                    MenuIcon: Icon.Message,
+                    MenuScreenNavigate: Screen8,
+                    MenuID: 3
                 }
             )
         Visible: =mostrarmenu
