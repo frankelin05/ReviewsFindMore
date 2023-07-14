@@ -1946,7 +1946,7 @@
                 },
                 "region": {
                   "charLength": 18,
-                  "charOffset": 66,
+                  "charOffset": 219,
                   "snippet": {
                     "text": "Max(Feedbacks; Id)"
                   }
@@ -1986,7 +1986,7 @@
                 },
                 "region": {
                   "charLength": 8,
-                  "charOffset": 50,
+                  "charOffset": 203,
                   "snippet": {
                     "text": "Text(Id)"
                   }
@@ -2026,7 +2026,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 59,
+                  "charOffset": 212,
                   "snippet": {
                     "text": "="
                   }
