@@ -223,12 +223,13 @@ Screen7 As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(3, 121, 137, 1), -20%)
         OnSelect: |-
-            =Patch(
+            =If(IsBlank(txt_outros_2.Text),Notify("Digite Uma Resposta"),
+            Patch(
                Feedbacks,
                LookUp(Feedbacks, Id = ID_FeedBacks),
                {Resposta: txt_outros_2.Text}
             );
-            Navigate(Screen4, ScreenTransition.Fade)
+            Navigate(Screen4, ScreenTransition.Fade))
         Size: =24
         Text: ="Submeter"
         Visible: =If(ScreenAnterior = "Screen8",false,true)
