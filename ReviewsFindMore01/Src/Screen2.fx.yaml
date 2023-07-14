@@ -47,7 +47,8 @@ Screen2 As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(3, 121, 137, 1), -20%)
         OnSelect: |-
-            =Patch(
+            =If(IsBlank(Txt_assunto.Text) || IsBlank(Txt_mensagem.Text),Notify("Preencha Tudo",NotificationType.Information),
+            Patch(
                Feedbacks,
                First(Filter(Feedbacks, Text(Id) = Text(Max(Feedbacks, Id)))),
                { Assunto: Txt_assunto.Text },
@@ -55,7 +56,7 @@ Screen2 As screen:
                { Topicos: Dropdown1_1.Selected.SampleStringField },
                { Email: User().Email}
             );
-            Navigate(Screen4, ScreenTransition.Fade)
+            Navigate(Screen4, ScreenTransition.Fade))
         Size: =24
         Text: ="Seguinte"
         Width: =280
@@ -96,7 +97,7 @@ Screen2 As screen:
         ZIndex: =10
 
     Txt_assunto As text:
-        BorderColor: =RGBA(69, 186, 184, 1)
+        BorderColor: =RGBA(3, 121, 137, 1)
         BorderThickness: =2
         Color: =RGBA(255, 255, 255, 1)
         Default: =
